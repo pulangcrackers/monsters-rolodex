@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/shoppingcart.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<header id="main-header">
+    <div class="logo">
+        <h3>O Shopping</h3>
+    </div>
+</header>
+
+<body class="login">
+    <div class="form-action">
+        <div class="login-form">
+            <form action="index.html">
+                <h1 class="login-form-header">Login</h1>
+                <div class="login-input">
+                    <input type="text">
+                    <span data-placeholder="Username"></span>
+                </div>
+                <div class="login-input">
+                    <input type="password">
+                    <span data-placeholder="Password"></span>
+                </div>
+                <input type="submit" class="login-btn" value="Login">
+                <div class="login-password">
+                    <a class="password-link" href="resetpassword.html">Reset Password</a>
+                    <a class="password-link" href="forgotpassword.html">Forgot Password</a>
+                </div>
+                <div class="bottom-text">
+                    Don't have an account?<a class="signup-link" href="signup.html">Sign up</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+            <img class="footer-logo-image" src="./images/Oshopping.png">
+            <h3 class="footer-logo-title">O shopping</h3>
+            <ul class="nav footer-nav">
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="./images/facebook.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="./images/twitter.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="./images/instagram.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./js/navSlide.js"></script>
+    <script type="text/javascript">
+        $(".login-input input").on("focus", function () {
+            $(this).addClass("focus");
+        });
+
+        $(".login-input input").on("blur", function () {
+            if ($(this).val() == "")
+                $(this).removeClass("focus");
+        });
+    </script>
+</body>
+
+</html>

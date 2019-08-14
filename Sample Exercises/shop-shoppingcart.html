@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/shoppingcart.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+</head>
+<header id="main-header">
+    <div class="logo">
+        <h3>O Shopping</h3>
+    </div>
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li class="active">
+                <a href="shop-shoppingcart.html">Store</a>
+            </li>
+            <li>
+                <a href="about-shoppingcart.html">About</a>
+            </li>
+            <li>
+                <a href="logout.html">Logout</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <section class="container content-section">
+        <h2 class="section-header">Store</h2>
+        <div class="shop-items">
+            <span class="shop-item-title-header">Designer Bags</span>
+            <div class="shop-item">
+                <span class="shop-item-title">Designer Bag #1</span>
+                <img class="shop-item-image" src="./images/bag1.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">Php 2000</span>
+                    <button class="btn shop-item-button" type="button">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Designer Bag #2</span>
+                <img class="shop-item-image" src="./images/bag2.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">Php 700</span>
+                    <button class="btn shop-item-button" type="button">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <span class="shop-item-title-header">Designer Shoes</span>
+            <div class="shop-item">
+                <span class="shop-item-title">Designer Shoes #1</span>
+                <img class="shop-item-image" src="./images/shoes1.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">Php 800</span>
+                    <button class="btn shop-item-button" type="button">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Designer Shoes #2</span>
+                <img class="shop-item-image" src="./images/shoes2.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">Php 1000</span>
+                    <button class="btn shop-item-button" type="button">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <span class="shop-item-title-header">Designer Dresses</span>
+            <div class="shop-item">
+                <span class="shop-item-title">Designer Dress #1</span>
+                <img class="shop-item-image" src="./images/dress1.jpeg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">Php 3000</span>
+                    <button class="btn shop-item-button" type="button">Add
+                        to Cart</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Designer Dress #2</span>
+                <img class="shop-item-image" src="./images/dress2.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">Php 1500</span>
+                    <button class="btn shop-item-button" type="button">Add
+                        to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container content-section section-body">
+        <h2 class="section-header">Cart</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">Item</span>
+            <span class="cart-price cart-header cart-column">Price</span>
+            <span class="cart-quantity cart-header cart-column">Quantity</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">Php 0</span>
+        </div>
+        <button class="btn btn-purchase" type="button">PURCHASE</button>
+    </section>
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+            <img class="footer-logo-image" src="./images/Oshopping.png">
+            <h3 class="footer-logo-title">O shopping</h3>
+            <ul class="nav footer-nav">
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="./images/facebook.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="./images/twitter.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="./images/instagram.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./js/navSlide.js"></script>
+    <script src="./js/shoppingcart.js"></script>
+</body>
+
+</html>

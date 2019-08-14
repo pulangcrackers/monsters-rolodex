@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.content {
+    background: black;
+    width: 100%;
+
+}
+#buttons {
+    text-align: center;
+    justify-content: center;
+    border: none;
+}
+
+#result {
+    line-height: 50px;
+    border: none;
+    padding: 10px 30px;
+}
+#firstNum {
+    border: 1px solid black;
+    padding: 3px 10px;
+}
+#secondNum {
+    border: 1px solid black;
+    padding: 3px 10px;
+}

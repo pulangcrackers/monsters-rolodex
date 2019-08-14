@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./css/calc.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper-inner">
+            <p>Num1<span>
+                <input id="firstNum" type="number">
+            </span></p>
+            <p>Num2<span>
+                <input id="secondNum" type="number">
+            </span></p>
+        <div id="buttons">
+            <input type="button" value="+" onclick="myCalculator('+')"/>
+            <input type="button" value="-" onclick="myCalculator('-')"/>
+            <input type="button" value="*" onclick="myCalculator('*')"/>
+            <input type="button" value="/" onclick="myCalculator('/')"/>
+        </div>
+        <p>Result<span>
+            <button id="result" type="number">0</button>
+        </div>
+    </div>
+</span></p>
+<script src="./js/calc.js"></script>
+</body>
+</html>

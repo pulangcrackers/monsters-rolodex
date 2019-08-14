@@ -1,0 +1,1295 @@
+/*HEADER AND NAVIGATION*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#main-header {
+	display: flex;
+	align-items: center;
+	background: #00203FFF;
+	min-height: 8vh;
+	align-items: center;
+	justify-content: space-around;
+	font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+	color: #fff;
+	letter-spacing: 5px;
+	font-size: 20px;
+}
+
+.nav-links {
+	display: flex;
+	float: right;
+}
+
+.nav-links li {
+	list-style: none;
+	margin: 30px;
+	padding: 0;
+}
+
+.nav-links li.active {
+	border-bottom: 3px solid #ADEFD1FF;
+	border-top: 3px solid #ADEFD1FF;
+}
+
+.nav-links a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.nav-links a:hover {
+	color: #95DBE5FF;
+	background: transparent;
+	padding: 20px 0 20px 0;
+	font-size: 22px;
+}
+
+.burger {
+	display: none;
+	cursor: pointer;
+}
+
+.burger div {
+	width: 30px;
+	height: 4px;
+	background: #ADEFD1FF;
+	margin: 7px;
+	transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1024px) {
+	.nav-links {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	.nav-links {
+		position: absolute;
+		right: 0;
+		height: 92vh;
+		top: 8vh;
+		background: #00203FFF;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		width: 43%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+		z-index: 7;
+	}
+
+	.nav-links a:hover {
+		color: #95DBE5FF;
+		background: transparent;
+		padding: 20px 0 20px 0;
+		font-size: 22px;
+	}
+
+	.nav-links li.active {
+		border-bottom: 3px solid #ADEFD1FF;
+		border-top: none;
+	}
+
+	.nav-links a {
+		color: #fff;
+	}
+
+	.burger {
+		display: block;
+	}
+
+	.content-section {
+		background: #95DBE5FF;
+		margin: 0;
+		padding: 0 0 5px 0;
+	}
+
+	.section-header {
+		font-family: 'Fredoka One', cursive;
+		font-size: 50px;
+		margin: 0;
+		padding: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+
+	.section-body {
+		background: #eee;
+		padding: 0 50px 0 50px;
+	}
+
+	.shop-item {
+		margin: 30px;
+	}
+
+	.shop-item-title-header {
+		display: block;
+		font-family: 'Arvo', serif;
+		width: 100%;
+		text-align: center;
+		font-weight: bold;
+		font-size: 40px;
+		letter-spacing: 2px;
+		color: #fff;
+		padding: 30px 0 30px 0;
+	}
+
+	.shop-item-image {
+		height: 250px;
+		width: 280px;
+	}
+
+	.shop-item-details {
+		display: flex;
+		align-items: center;
+		padding: 5px;
+		justify-content: center;
+	}
+
+	.shop-item-price {
+		flex-grow: 1;
+		color: #333;
+		font-family: 'Fredoka One', cursive;
+		font-size: 15px;
+		letter-spacing: 3px;
+		font-weight: bold;
+	}
+
+	.shop-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.btn {
+		text-align: center;
+		vertical-align: middle;
+		padding: 20px 30px;
+		cursor: pointer;
+	}
+
+	.shop-item-button {
+		color: #eee;
+		border: none;
+		border-radius: .3em;
+		font-weight: bold;
+		background-size: 250%;
+		background-image: linear-gradient(to left, rgb(94, 208, 253), rgb(14, 102, 255), rgb(94, 208, 253));
+	}
+
+	.shop-item-button:hover {
+		background-position: right;
+	}
+
+	.cart-header {
+		font-weight: bold;
+		font-size: 1.25em;
+		color: #333;
+	}
+
+	.cart-column {
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #333;
+		margin-right: 1.5em;
+		padding-bottom: 10px;
+		margin-top: 10px;
+	}
+
+	.cart-row {
+		display: flex;
+		margin: 10px;
+		padding: 0;
+		text-align: center;
+	}
+
+	.cart-item {
+		width: 35%;
+		justify-content: center;
+		margin: 10px;
+	}
+
+	.cart-price {
+		width: 32%;
+		font-size: 1.2em;
+		color: #333;
+		justify-content: center;
+		margin: 10px;
+		display: flex;
+	}
+
+	.cart-quantity {
+		width: 33%;
+		justify-content: center;
+		display: flex;
+		margin: 10px;
+	}
+
+	.cart-item-title {
+		color: #333;
+		font-size: 1.2em;
+		margin-left: 30px;
+	}
+
+	.cart-item-image {
+		width: 75px;
+		height: auto;
+		border-radius: 10px;
+	}
+
+	.cart-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.btn-danger {
+		color: #eee;
+		border: none;
+		border-radius: .3em;
+		font-weight: bold;
+		background-size: 250%;
+		background-image: linear-gradient(to left, rgb(253, 94, 94), rgb(221, 23, 23), rgb(253, 94, 94));
+	}
+
+	.btn-danger:hover {
+		background-position: right;
+	}
+
+	.cart-quantity-input {
+		height: 34px;
+		width: 50px;
+		padding: 0;
+		font-size: 1.2em;
+		border-radius: 5px;
+		border: 1px solid rgb(221, 23, 23);
+		background: #eee;
+		color: #333;
+		text-align: center;
+	}
+
+	.cart-row:last-child {
+		border-bottom: 1px solid #333;
+	}
+
+	.cart-row:last-child .cart-column {
+		border: none;
+	}
+
+	.cart-total {
+		text-align: end;
+		margin-top: 10px;
+		margin-right: 10px;
+	}
+
+	.cart-total-title {
+		font-weight: bold;
+		font-size: 1.5em;
+		color: #333;
+		margin-right: 20px;
+	}
+
+	.cart-total-price {
+		color: #333;
+		font-size: 1.1em;
+	}
+
+	.btn-purchase {
+		display: block;
+		margin: 40px auto 20px auto;
+		font-size: 1.75em;
+		color: #eee;
+		border: none;
+		border-radius: .3em;
+		font-weight: bold;
+		background-size: 250%;
+		background-image: linear-gradient(to left, rgb(56, 98, 248), rgb(17, 9, 247), rgb(56, 98, 248));
+	}
+
+	.btn-purchase:hover {
+		background-position: right;
+	}
+
+	.main-footer {
+		background: #00203FFF;
+		color: #fff;
+		letter-spacing: 5px;
+		font-size: 20px;
+		font-family: 'Poppins', sans-serif;
+		padding: 20px 50px 20px 50px;
+	}
+
+	.footer-logo-image {
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+	}
+
+	.footer-logo-title {
+		margin-left: 15px;
+		font-size: 10px;
+	}
+
+	.main-footer-container {
+		display: flex;
+		align-items: center;
+	}
+
+	.main-footer-container ul {
+		flex-grow: 1;
+		text-align: end;
+	}
+
+	.footer-nav li {
+		padding: 0 .5em;
+		list-style: none;
+		display: inline-block;
+	}
+
+	.footer-nav img {
+		width: 35px;
+		height: 35px;
+	}
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-12px, 4px);
+}
+
+.toggle .line2 {
+	opacity: 0;
+}
+
+.toggle .line3 {
+	transform: rotate(45deg) translate(-12px, -4px);
+}
+
+h1 {
+	text-align: left;
+	margin: 50px 80px 30px 20px;
+	font-size: 3.2em;
+	font-family: 'Rubik Mono One', sans-serif;
+}
+
+p {
+	font-size: 18px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+		sans-serif;
+	font-weight: bold;
+	font-style: outset;
+	font: outline;
+	color: rgb(10, 162, 179);
+}
+
+span {
+	font-size: 13px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+		sans-serif;
+	font-weight: bold;
+	font: outline;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+.blue-container {
+	width: 100%;
+	background: #95DBE5FF;
+	color: #fff;
+	margin-top: 15%;
+	padding: 4em 0;
+	border-top-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	transform: skewY(-2deg);
+}
+
+.blue-container::before {
+	content: "";
+	width: 40px;
+	height: 40px;
+	background: #95DBE5FF;
+	top: -39px;
+	position: absolute;
+	right: 0;
+	z-index: -2;
+}
+
+.blue-container::after {
+	content: "";
+	width: 80px;
+	height: 80px;
+	background: #fff;
+	top: -80px;
+	position: absolute;
+	right: 0;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.blue-container ul {
+	transform: skewY(2deg);
+	justify-content: center;
+	align-items: center;
+}
+
+.blue-container ul li {
+	margin: 0 50px 40px 50px;
+	list-style: none;
+	text-align: center;
+}
+
+.blue-container ul li .blue-container-icon {
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	width: 80px;
+	padding: 2px 5px 2px 5px;
+}
+
+.blue-container ul li p {
+	padding: 0.5em;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.white-container {
+	display: flex;
+	padding: 4em 0 2em;
+	margin-top: -3%;
+	justify-content: center;
+	align-items: center;
+}
+
+.white-container ul li {
+	list-style: none;
+	display: block;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.white-container ul li:first-child {
+	margin-bottom: 2em;
+}
+
+.container {
+	margin-top: 50px;
+	align-items: center;
+	justify-content: center;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+.avatar {
+	width: 100px;
+	height: auto;
+}
+
+figcaption {
+	font-weight: bold;
+	color: #00203FFF;
+	margin-bottom: .5em;
+}
+
+h2 {
+	text-align: center;
+}
+
+.get-started-button {
+	border: none;
+	background: #ADEFD1FF;
+	color: #333;
+	border-radius: 20px;
+	padding: 20px 25px;
+	text-decoration: none;
+	font-size: 1.5em;
+	margin: 3% auto 7%;
+	position: relative;
+	width: calc(100% -1em);
+	display: flex;
+}
+
+.about-main-footer-container {
+	width: 100%;
+	background: #00203FFF;
+	padding: 0;
+	/*border-top-right-radius: 40%;*/
+	display: flex;
+	align-items: center;
+}
+
+/*.about-main-footer-container::before {
+	content: "";
+	width: 40px;
+	height: 40px;
+	background: #00203FFF;
+	position: absolute;
+	top: -39px;
+	left: 0;
+	z-index: -2;
+}
+
+.about-main-footer-container::after {
+	content: "";
+	width: 80px;
+	height: 80px;
+	background: #fff;
+	position: absolute;
+	top: -80px;
+	left: 0;
+	border-radius: 50%;
+	z-index: -1;
+}*/
+
+.about-main-footer-container {
+	/*transform: skewY(2deg);*/
+	color: #fff;
+	letter-spacing: 5px;
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+	padding: 30px 20px 30px 20px;
+	margin: 0;
+}
+
+.about-main-footer-container ul {
+	flex-grow: 1;
+	text-align: end;
+}
+
+/*STORE*/
+
+.content-section {
+	background: #95DBE5FF;
+	margin: 0;
+	padding: 0 0 5px 0;
+}
+
+.section-header {
+	font-family: 'Fredoka One', cursive;
+	font-size: 50px;
+	margin: 0;
+	padding: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.section-body {
+	background: #ffffff;
+	padding: 0 80px 0 80px;
+}
+
+.shop-item {
+	margin: 30px;
+}
+
+.shop-item-title-header {
+	display: block;
+	font-family: 'Arvo', serif;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+	letter-spacing: 2px;
+	color: #fff;
+	padding: 30px 0 30px 0;
+}
+
+.shop-item-title {
+	display: block;
+	font-family: 'Arvo', serif;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	letter-spacing: 2px;
+	color: #333;
+	font-family: 'Fredoka One', cursive;
+	padding-bottom: 10px;
+}
+
+.shop-item-image {
+	height: 250px;
+	width: 280px;
+}
+
+.shop-item-details {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	justify-content: center;
+}
+
+.shop-item-price {
+	flex-grow: 1;
+	color: #333;
+	font-family: 'Fredoka One', cursive;
+	font-size: 15px;
+	letter-spacing: 3px;
+	font-weight: bold;
+}
+
+.shop-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.btn {
+	text-align: center;
+	vertical-align: middle;
+	padding: 20px 30px;
+	cursor: pointer;
+}
+
+.shop-item-button {
+	color: #eee;
+	border: none;
+	border-radius: .3em;
+	font-weight: bold;
+	background-size: 250%;
+	background-image: linear-gradient(to left, rgb(94, 208, 253), rgb(14, 102, 255), rgb(94, 208, 253));
+}
+
+.shop-item-button:hover {
+	background-position: right;
+}
+
+.cart-header {
+	font-weight: bold;
+	font-size: 1.25em;
+	color: #333;
+}
+
+.cart-column {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #333;
+	margin-right: 1.5em;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+.cart-row {
+	display: flex;
+	margin: 10px;
+	padding: 0;
+	text-align: center;
+}
+
+.cart-item {
+	width: 35%;
+	justify-content: center;
+	margin: 10px;
+}
+
+.cart-price {
+	width: 32%;
+	font-size: 1.2em;
+	color: #333;
+	justify-content: center;
+	margin: 10px;
+	display: flex;
+}
+
+.cart-quantity {
+	width: 33%;
+	justify-content: center;
+	display: flex;
+	margin: 10px;
+}
+
+.cart-item-title {
+	color: #333;
+	font-size: 1.2em;
+	margin-left: 20px;
+}
+
+.cart-item-image {
+	width: 75px;
+	height: auto;
+	border-radius: 10px;
+}
+
+.btn-danger {
+	color: #eee;
+	border: none;
+	border-radius: .3em;
+	font-weight: bold;
+	background-size: 250%;
+	background-image: linear-gradient(to left, rgb(253, 94, 94), rgb(221, 23, 23), rgb(253, 94, 94));
+}
+
+.btn-danger:hover {
+	background-position: right;
+}
+
+.cart-quantity-input {
+	height: 34px;
+	width: 50px;
+	padding: 0;
+	font-size: 1.2em;
+	border-radius: 5px;
+	border: 1px solid rgb(221, 23, 23);
+	background: #eee;
+	color: #333;
+	text-align: center;
+	margin-right: 10px;
+}
+
+.cart-row:last-child {
+	border-bottom: 1px solid #333;
+}
+
+.cart-row:last-child .cart-column {
+	border: none;
+}
+
+.cart-total {
+	text-align: end;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.cart-total-title {
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #333;
+	margin-right: 20px;
+}
+
+.cart-total-price {
+	color: #333;
+	font-size: 1.1em;
+}
+
+.btn-purchase {
+	display: block;
+	margin: 40px auto 20px auto;
+	font-size: 1.75em;
+	color: #eee;
+	border: none;
+	border-radius: .3em;
+	font-weight: bold;
+	background-size: 250%;
+	background-image: linear-gradient(to left, rgb(56, 98, 248), rgb(17, 9, 247), rgb(56, 98, 248));
+}
+
+.btn-purchase:hover {
+	background-position: right;
+}
+
+.main-footer {
+	background: #00203f;
+	padding: 0;
+	margin: 0;
+	bottom: 0;
+}
+
+.main-footer-container {
+	color: #fff;
+	letter-spacing: 5px;
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+	padding: 30px 20px 30px 20px;
+	display: flex;
+	align-items: center;
+}
+
+.footer-logo-image {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+.footer-logo-title {
+	margin-left: 15px;
+	font-size: 10px;
+}
+
+.main-footer-container ul {
+	flex-grow: 1;
+	text-align: end;
+}
+
+.footer-nav li {
+	padding: 0 .5em;
+	list-style: none;
+	display: inline-block;
+}
+
+.footer-nav img {
+	width: 35px;
+	height: 35px;
+}
+
+/*INDEX(LOG IN)
+
+.index-sign-up {
+	background-image: url(/images/—Pngtree—oil\ paint\ background_78915.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.sign-up-form {
+	background: rgba(0, 44, 63, 0.3);
+	box-sizing: border-box;
+	margin: 80px 100px 80px 100px;
+	padding: 20px;
+	border: 2px solid rgb(0, 0, 0);
+}
+
+.sign-up-form-container {
+	color: #333;
+	letter-spacing: 5px;
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+	padding: 30px 20px 30px 20px;
+	display: block;
+}
+
+.sign-up-form-header {
+	text-align: center;
+}
+
+label {
+	text-align: left;
+	display: inline;
+}
+
+.sign-up-form-input {
+	margin-right: 20px;
+	display: inline;
+}
+
+.sign-up-content {
+	display: block;
+}
+
+.content {
+	flex-wrap: wrap;
+	justify-content: space-around;
+	display: flex;
+}
+
+*/
+/* LOGIN & SIGN UP */
+.login {
+	min-height: 100vh;
+	background-image: linear-gradient(120deg, rgb(14, 133, 236), rgb(26, 214, 224));
+}
+
+.form-action {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.login-form {
+	background: rgba(0, 0, 0, 0.4);
+	margin: 60px 10px 50px 10px;
+	padding: 5px 30px 30px 30px;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-top-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	position: relative;
+}
+
+.login-form-header {
+	color: #fff;
+	font-size: 30px;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	letter-spacing: 5px;
+	margin: 30px 30px 10px 30px;
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+}
+
+.login-input {
+	border-bottom: 2px solid #000;
+	position: relative;
+	margin: 30px 0;
+}
+
+.login-input input {
+	font-size: 15px;
+	color: #eee;
+	border: none;
+	width: 100%;
+	background: none;
+	padding: 0 5px;
+	height: 48px;
+	outline: none;
+	text-align: center;
+}
+
+.login-input span::before {
+	content: attr(data-placeholder);
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	color: #fff;
+	transform: translateY(-50%);
+	z-index: -1;
+	transition: .5s;
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 2px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.login-input span::after {
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background: linear-gradient(120deg, rgb(14, 133, 236), rgb(26, 214, 224));
+	transition: .5s;
+}
+
+.focus + span::before {
+	top: -5px;
+}
+
+.focus + span::after {
+	width: 100%;
+}
+
+.login-btn {
+	display: block;
+	width: 100%;
+	height: 50px;
+	border: none;
+	background: linear-gradient(120deg, rgb(26, 214, 224), rgb(14, 133, 236), rgb(26, 214, 224));
+	background-size: 200%;
+	color: #fff;
+	outline: none;
+	transition: .5s;
+	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	letter-spacing: 3px;
+	border-radius: 40px;
+}
+
+.login-btn:hover {
+	background-position: right;
+}
+
+.login-password {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 15px;
+	font-family: 'Red Hat Display', sans-serif;
+	padding: 0;
+}
+
+.password-link {
+	text-decoration: none;
+	color: #fff;
+	margin-left: 20px;
+}
+
+.password-link:first-child {
+	margin-right: 10px;
+	margin-left: 0;
+}
+
+.password-link:last-child {
+	margin-right: 0;
+}
+
+.password-link:hover {
+	border-bottom: 2px solid #000;
+}
+
+.bottom-text {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 15px;
+	font-family: 'Red Hat Display', sans-serif;
+	text-align: center;
+}
+
+.signup-link {
+	text-decoration: none;
+	color: #fff;
+	margin-left: 20px;
+	border-bottom: none;
+}
+
+.signup-link:hover {
+	border-bottom: 2px solid #000;
+}
+
+/*
+
+.form-action {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.form-header {
+	text-align: center;
+	padding-bottom: 30px;
+	font-size: 30px;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	letter-spacing: 5px;
+}
+
+
+.form-header-container {
+	display: block;
+	text-align: center;
+}
+
+.form-content {
+	display: block;
+	margin: 0;
+	justify-content: flex;
+	align-items: center;
+	text-align: center;
+	padding: 0;
+}
+
+.form-content-form-input {
+	display: block;
+	margin: 0;
+	padding: 10px 10px 25px;
+	text-align: center;
+}
+
+.form-input[type=text] {
+	text-align: center;
+	display: block;
+	width: 240px;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #fff;
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 15px;
+	font-weight: 200px;
+	padding: 10px 10px 10px 10px;
+	transition: border 0.5s;
+	outline: none;
+	color: #fff;
+}
+
+.form-input[type=text]:hover {
+	font-size: 16px;
+	transition: transform 0.5s ease-in;
+	border-bottom: 1px solid #95DBE5FF;
+}
+
+
+.form-input[type=password] {
+	text-align: center;
+	display: block;
+	width: 240px;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #fff;
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 15px;
+	font-weight: 200px;
+	padding: 10px 10px 10px 10px;
+	transition: border 0.5s;
+	outline: none;
+	color: #fff;
+}
+
+.form-input[type=password]:hover {
+	font-size: 16px;
+	transition: transform 0.5s ease-in;
+	border-bottom: 1px solid #95DBE5FF;
+}
+
+
+
+.form-button {
+	border: none;
+	width: 190px;
+	background: #fff;
+	color: #000;
+	border: 3px solid #95DBE5FF;
+	font-size: 20px;
+	line-height: 25px;
+	padding: 10px 0;
+	border-radius: 15px;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-family: 'Red Hat Display', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.form-button:hover {
+	color: #fff;
+	background: #000;
+	border: 5px solid #ADEFD1FF;
+}
+
+.login-link {
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+
+.login-link:first-child {
+	margin-right: 30px;
+}
+
+.login-link:hover {
+	color: #00203FFF;
+}
+
+.container-password {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 15px;
+	font-family: 'Red Hat Display', sans-serif;
+	margin-bottom: 20px;
+}
+
+::placeholder {
+	text-align: center;
+	color: #fff;
+}
+
+.sign-in {
+	background: rgba(0, 0, 0, 0.4);
+	margin: 50px 10px 20px 10px;
+	padding: 20px 30px 30px 30px;
+	display: inline-block;
+	border-top-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+}
+
+.container-signup {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+.signup-span {
+	color: #fff;
+	margin-right: 20px;
+	font-size: 15px;
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+.signup-link {
+	text-align: center;
+	color: #95DBE5FF;
+	font-size: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+.signup-link:hover {
+	border-bottom: 3px solid #000;
+	color: #ADEFD1FF;
+	cursor: pointer;
+}
+
+.signup-link-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.signup-link-list {
+	list-style: none;
+}
+
+
+.signup-link-image {
+	width: 50px;
+	height: 50px;
+}
+
+<h3 class="form-header">Log In</h3>
+            <form>
+                <div class="form-content">
+                    <div class="form-content-form-input">
+                        <input class="form-input" type="text" name="email" placeholder="Email">
+                        <input class="form-input" type="password" name="password" placeholder="Password">
+                    </div>
+                    <a class="login-link" href="login.html"><input class="form-button" type="button" value="Log In"></a>
+                </div>
+                <div id="form-password-container">
+                    <div class="container-password">
+                        <a class="login-link" href="resetpassword.html">Reset Password</a>
+                        <a class="login-link" href="forgetpassword.html">Forget Password</a>
+                    </div>
+                </div>
+                <div class="container-signup">
+                    <span class="signup-span">Don't have an account?</span><a class="signup-link"
+                        href="signup.html">Sign
+                        Up</a>
+                </div>
+                <ul class="signup-link-container">
+                    <li class="signup-link-list">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img class="signup-link-image" src="./images/facebook.png">
+                        </a>
+                    </li>
+                    <li class="signup-link-list">
+                        <a href="http://tiny.cc/kvnmaz" target="_blank">
+                            <img class="signup-link-image" src="./images/goo.png">
+                        </a>
+                    </li>
+                </ul>
+
+            </form>
+
+*/
