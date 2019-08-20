@@ -1,5 +1,6 @@
 .card-container {
     display: flex;
+    align-items: center;
     justify-content: flex;
     flex-wrap: wrap;
     flex-direction: column;
